@@ -1,0 +1,18 @@
+[versions]
+kotlin-version = "1.9.0"
+dagger-version = "2.49"
+retrofit-version = "2.9.0"
+interceptor-version = "4.11.0"
+
+[libraries]
+kotlin-android-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "kotlin-version" }
+
+google-dagger = { group = "com.google.dagger", name = "dagger", version.ref = "dagger-version" }
+google-dagger-compiler = { group = "com.google.dagger", name = "dagger-compiler", version.ref = "dagger-version" }
+
+squareup-retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit-version"}
+squareup-retrofit-converter = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit-version"}
+okhttp-loggin-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "interceptor-version" }
+
+[bundles]
+retrofit-deps = ["squareup-retrofit", "squareup-retrofit-converter", "okhttp-loggin-interceptor"]
