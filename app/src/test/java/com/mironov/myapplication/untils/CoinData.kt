@@ -16,7 +16,7 @@ object CoinData {
         lastUpdate = 1701769790,
         lowDay = 1.0f,
         highDay = 1.0f,
-        imageUrl = "url"
+        imageUrl = "https://cryptocompare.comurl"
     )
 
     val coinDto = CoinInfoDto (
