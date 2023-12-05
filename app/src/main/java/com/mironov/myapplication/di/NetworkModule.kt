@@ -1,11 +1,13 @@
 package com.mironov.myapplication.di
 
+import com.mironov.myapplication.data.network.CoinApi
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.create
 
 @Module
 class NetworkModule {
@@ -30,4 +32,10 @@ class NetworkModule {
             .client(httpClient)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
+
+    @Provides
+    @AppScope
+    fun provideCoinApi(retrofit: Retrofit): CoinApi {
+        return retrofit.create()
+    }
 }
