@@ -8,7 +8,7 @@ interface CoinApi {
 
     @GET("top/totalvolfull")
     suspend fun getTopCoins(
-        @Query("limit") limit: Int,
+        @Query("limit") limit: Int = 50,
         @Query("tsym") currency: String,
     ): CoinResponse
 }

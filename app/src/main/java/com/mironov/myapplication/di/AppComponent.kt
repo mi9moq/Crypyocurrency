@@ -5,7 +5,8 @@ import dagger.Component
 @AppScope
 @Component(
     modules = [
-        NetworkModule::class
+        CoinModule::class,
+        DispatcherModule::class,
     ]
 )
 interface AppComponent {

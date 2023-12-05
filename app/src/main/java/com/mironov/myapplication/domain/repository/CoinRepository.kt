@@ -4,5 +4,5 @@ import com.mironov.myapplication.domain.entity.CoinInfo
 
 interface CoinRepository {
 
-    suspend fun getList(): List<CoinInfo>
+    suspend fun getList(currency: String): List<CoinInfo>
 }

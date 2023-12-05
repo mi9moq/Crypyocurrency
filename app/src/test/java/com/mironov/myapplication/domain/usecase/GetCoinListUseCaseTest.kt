@@ -14,14 +14,15 @@ class GetCoinListUseCaseTest {
     private val repository: CoinRepository = mock()
     private val useCase = GetCoinListUseCase(repository)
     private val coinList = CoinData.coinList
+    private val currency = "USD"
 
     @Test
     fun `get EXPECT list coins`() = runTest {
 
-        whenever(repository.getList()) doReturn coinList
+        whenever(repository.getList(currency)) doReturn coinList
 
         val expect = coinList
-        val actual = useCase()
+        val actual = useCase(currency)
 
         assertEquals(expect,actual)
     }
