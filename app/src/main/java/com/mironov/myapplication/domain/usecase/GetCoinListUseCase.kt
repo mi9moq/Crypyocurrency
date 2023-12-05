@@ -6,5 +6,5 @@ import javax.inject.Inject
 class GetCoinListUseCase @Inject constructor(
     private val repository: CoinRepository
 ) {
-    suspend operator fun invoke() = repository.getList()
+    suspend operator fun invoke(currency: String) = repository.getList(currency)
 }
