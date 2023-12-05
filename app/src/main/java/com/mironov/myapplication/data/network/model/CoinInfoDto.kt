@@ -10,15 +10,15 @@ data class CoinInfoDto(
     @SerializedName("TOSYMBOL")
     val currency: String,
     @SerializedName("PRICE")
-    val price: String,
+    val price: Float,
     @SerializedName("LASTTRADEID")
-    val lastTraded: String,
+    val lastTraded: Long,
     @SerializedName("LASTUPDATE")
-    val lastUpdate: String,
+    val lastUpdate: Long,
     @SerializedName("LOWDAY")
-    val lowDay: String,
+    val lowDay: Float,
     @SerializedName("HIGHDAY")
-    val highDay: String,
+    val highDay: Float,
     @SerializedName("IMAGEURL")
     val imageUrl: String,
 )
