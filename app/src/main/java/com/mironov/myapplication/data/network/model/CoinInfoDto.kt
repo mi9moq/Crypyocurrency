@@ -2,7 +2,7 @@ package com.mironov.myapplication.data.network.model
 
 import com.google.gson.annotations.SerializedName
 
-data class CoinInfo(
+data class CoinInfoDto(
     @SerializedName("CCCAGG")
     val market: String,
     @SerializedName("FROMSYMBOL")
