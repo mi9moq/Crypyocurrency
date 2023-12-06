@@ -1,13 +1,16 @@
 package com.mironov.myapplication.di
 
+import androidx.lifecycle.ViewModel
 import com.mironov.myapplication.data.datasource.CoinRemoteDataSource
 import com.mironov.myapplication.data.datasource.CoinRemoteDataSourceImpl
 import com.mironov.myapplication.data.network.CoinApi
 import com.mironov.myapplication.data.repository.CoinRepositoryImpl
 import com.mironov.myapplication.domain.repository.CoinRepository
+import com.mironov.myapplication.presentation.CoinListViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
+import dagger.multibindings.IntoMap
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -24,6 +27,11 @@ interface CoinModule {
     @Binds
     @AppScope
     fun bindCoinRepository(impl: CoinRepositoryImpl): CoinRepository
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(CoinListViewModel::class)
+    fun bindCoinListViewModel(impl: CoinListViewModel): ViewModel
 
     companion object {
         private const val BASE_URL = "https://min-api.cryptocompare.com/data/"
