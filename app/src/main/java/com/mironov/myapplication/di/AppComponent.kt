@@ -1,5 +1,6 @@
 package com.mironov.myapplication.di
 
+import com.mironov.myapplication.ui.MainActivity
 import dagger.Component
 
 @AppScope
@@ -10,4 +11,6 @@ import dagger.Component
     ]
 )
 interface AppComponent {
+
+    fun inject(activity: MainActivity)
 }
