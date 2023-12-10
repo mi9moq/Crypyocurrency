@@ -2,7 +2,6 @@ package com.mironov.myapplication.data.converter
 
 import com.mironov.myapplication.data.network.model.CoinInfoDto
 import com.mironov.myapplication.domain.entity.CoinInfo
-import java.util.Locale
 import javax.inject.Inject
 
 class CoinConverter @Inject constructor() {
