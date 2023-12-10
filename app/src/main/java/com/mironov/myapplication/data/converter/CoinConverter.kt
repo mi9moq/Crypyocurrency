@@ -19,6 +19,8 @@ class CoinConverter @Inject constructor() {
         lastTraded = from.lastTraded,
         lowDay = from.lowDay,
         highDay = from.highDay,
-        imageUrl = BASE_IMAGE_URL + from.imageUrl
+        imageUrl = BASE_IMAGE_URL + from.imageUrl,
+        priceChange24Hour = from.priceChange24Hour,
+        percentChange24Hour = from.percentChange24Hour,
     )
 }

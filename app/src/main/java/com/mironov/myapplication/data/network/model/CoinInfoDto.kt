@@ -21,4 +21,8 @@ data class CoinInfoDto(
     val highDay: Float,
     @SerializedName("IMAGEURL")
     val imageUrl: String,
+    @SerializedName("CHANGE24HOUR")
+    val priceChange24Hour: Float,
+    @SerializedName("CHANGEPCT24HOUR")
+    val percentChange24Hour: Float,
 )
