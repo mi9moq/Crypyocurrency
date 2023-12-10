@@ -16,7 +16,9 @@ object CoinData {
         lastUpdate = 1701769790,
         lowDay = 1.0f,
         highDay = 1.0f,
-        imageUrl = "https://cryptocompare.comurl"
+        imageUrl = "https://cryptocompare.comurl",
+        priceChange24Hour = "-2.13",
+        percentChange24Hour = "-0.31"
     )
 
     val coinDto = CoinInfoDto (
@@ -28,7 +30,9 @@ object CoinData {
         lastUpdate = 1701769790,
         lowDay = 1.0f,
         highDay = 1.0f,
-        imageUrl = "url"
+        imageUrl = "url",
+        priceChange24Hour = -2.126f,
+        percentChange24Hour = -0.313f
     )
 
     val currency = "USD"

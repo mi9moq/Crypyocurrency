@@ -10,4 +10,6 @@ data class CoinInfo(
     val lowDay: Float,
     val highDay: Float,
     val imageUrl: String,
+    val priceChange24Hour: String,
+    val percentChange24Hour: String,
 )
