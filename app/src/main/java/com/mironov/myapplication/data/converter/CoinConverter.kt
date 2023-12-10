@@ -9,8 +9,6 @@ class CoinConverter @Inject constructor() {
 
     companion object {
         private const val BASE_IMAGE_URL = "https://cryptocompare.com"
-
-        private val locale = Locale.US
     }
 
     fun revert(from: CoinInfoDto): CoinInfo = CoinInfo(
@@ -23,15 +21,7 @@ class CoinConverter @Inject constructor() {
         lowDay = from.lowDay,
         highDay = from.highDay,
         imageUrl = BASE_IMAGE_URL + from.imageUrl,
-        priceChange24Hour = String.format(
-            locale = locale,
-            format = "%.2f",
-            from.priceChange24Hour
-        ),
-        percentChange24Hour = String.format(
-            locale = locale,
-            format = "%.2f",
-            from.percentChange24Hour
-        )
+        priceChange24Hour = from.priceChange24Hour,
+        percentChange24Hour = from.percentChange24Hour,
     )
 }
